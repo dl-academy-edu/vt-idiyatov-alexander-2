@@ -1,44 +1,135 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <title>Design Life Kids</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="/style.css">
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link href="/common.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/static/fonts/oswald.css" />
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,700i%7CMontserrat:300,700%7COpen+Sans:400,700%7CRoboto&display=swap"
+    />    
     <link rel="shortcut icon" href="/static/images/favicon.ico">
-    <title>Главная</title>
   </head>
   <body>
     @@include('header/index.html')
-    <main class="index-main">
-      <div class="container">
-        <h1 class="title-block title-block_one">Главная</h1>
-        <h2 class="title-block title-block_two">
-          Вы находитесь на главной страницe
-        </h2>
-        <div class="parallax-card">
-          <div class="parallax-card__wrapper-img">
-            <img
-              class="parallax-card__img"
-              src="static/images/cactus.jpg"
-              alt="Картинка кактуса"
-            />
-          </div>
-
-          <div class="parallax-card__description">
-            <p class="parallax-card__paragraph">Кактус маминой подруги</p>
-            <p class="parallax-card__paragraph">
-              Не нужно поливать и никогда не сохнет
-            </p>
+    <main>
+      <section class="poster container">
+        <h1 class="hidden">Poster</h1>
+        <div class="slider_nav">
+          <span class="slider_nav-text">01</span>
+          <div class="slider_nav-inner">
+            <button class="slider_nav-item_active"></button>
+            <button class="slider_nav-item" type="button" aria-label="slider-navigation"></button>
+            <button class="slider_nav-item" type="button" aria-label="slider-navigation"></button>
+            <button class="slider_nav-item" type="button" aria-label="slider-navigation"></button>
           </div>
         </div>
+      <div class="poster-title">       
+        <h2 class="poster-title-text">
+          THE OOH NOO COLLECTION
+        </h2>
+        <p class="poster-text text-middle">Designed in Slovenia</p>
+        @@include('link/index.html', {
+          "text": "EXPLORE NOW",
+          "href": "#",
+          "class": "poster-button"
+        })
+      </div> 
+        <img class="background-img" src="/static/images/Poster.png" alt="poster" width="635" height="461">
+      </section>
+      <p class="poster-text text-small">Free (continental) USA shipping on all orders of $100 USD or more!</p>
+      <section class="products container">
+        <h2 class="products-title">Category Products</h2>
+        <div class="products-links">          
+          <a class="products-link link-kids" href="#">
+            <span class="products-link-text">APPAREL KIDS</span></a>
+          <a class="products-link link-shop" href="#">
+            <span class="products-link-text">HOLIDAY SHOP</span></a>
+          <a class="products-link link-toys" href="#">
+            TOYS</a>
+          <a class="products-link link-accessories" href="#">
+            ACCESSORIES</a>         
+        </div>
+        <div class="slider-nav">
+          <button class="slider_nav-button nav-button-left" type="button" aria-label="arrow-left"></button>
+          <button class="slider_nav-button nav-button-right" type="button" aria-label="arrow-right"></button>
+          <p class="products-text">Modern finds for the modern home. Curated goods by unique designers
+            around the world from fashion to furniture for kids and adults.</p>
+        </div>
+      </section>
+        
+      <section class="delivery container">
+        <img class="delivery-img" src="/static/images/delivery.jpg" alt="woman in dress"  width="480" height="559">
+      <div class="delivery-content">
+        <h2 class="delivery-title">Delivery</h2>
+      <div class="delivery-links">
+        <span class="delivery-link_active"></span>
+        <a class="delivery-link delivery-link-active" href="#">Delivery</a>
+        <a class="delivery-link" href="#">Guarantee</a>
+        <a class="delivery-link" href="#">Credit</a>
       </div>
-    </main>
-    @@include('footer/index.html')
-    <script src="script.js"></script>
-  </body>
+        <p class="delivery-text text-1">Some days i feel like i've been working on dlk my entire life
+          and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+        <p class="delivery-text text-2">What started as an outlet to deal with the traumatic loss of my husband,
+          dlk has now become a truly happy place for me and i have you and all
+          of the beautiful designers that we work with to thank!</p>
+        @@include('link/index.html', {
+          "text": "LEARN MORE",
+          "href": "#",
+          "class": "delivery-button"
+        })
+      </div>
+      </section>
+      <section class="partners container">
+        <h2 class="hidden">partners</h2>
+        <ul class="partners-links">
+          <li>
+            <a class="partners-link" href="#"><img src="/static/images/partner-1.png" alt="mail.ru" aria-label="mail.ru" width="193" height="60"></a>
+          </li>
+          <li>
+            <a class="partners-link" href="#"><img src="/static/images/partner-2.png" alt="apple" aria-label="apple" width="179" height="61"></a>
+          </li>
+          <li>
+            <a class="partners-link" href="#"><img src="/static/images/partner-3.png" alt="eltex" aria-label="eltex" width="216" height="46"></a>
+          </li>
+          <li>
+            <a class="partners-link" href="#"><img src="/static/images/partner-4.png" alt="owox" aria-label="owox" width="211" height="40"></a>
+          </li>
+        </ul>
+      </section>
+      <div class="about-us-contacts container">
+      <article class="about-us">
+        <h2 class="about-us-title title-large">Design Life Kids</h2>
+        <h3 class="about-us-title title-middle">About Us</h3>
+        <p class="about-us-text">
+          Some days i feel like i've been working on dlk my entire life and
+          there are other days that i am completely shocked that four
+          years have flown by. It's simply magical.
+        </p>
+        @@include('link/index.html', {
+          "text": "buy now",
+          "href": "#",
+          "class": "about-us-button"
+        })
+      </article> 
+      <section class="contacts">
+        <h2 class="contacts-title">Contacts</h2>
+        <p class="contacts-text">Some days i feel like i've been working on dlk my entire life and
+          there are other days that i am completely shocked that four
+          years have flown by. It's simply magical.</p>
+        <div class="map-responsive">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6307.285808430329!2d-122.4229666!3d37.7749705!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sru!4v1583960301769!5m2!1sen!2sru" width="483" height="196" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        </section>
+      </div>  
+    </main> 
+    @@include('footer/index.html')    
+    <div class="modal-bg modal-bg_close modal-bg_js">
+      @@include('form/index.html')
+      
+    </div>
+  <script src="/script.js"></script>
+</body>   
 </html>

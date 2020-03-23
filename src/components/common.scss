@@ -1,28 +1,127 @@
-// Подключение компонентов
-@import "./header/header";
-@import "./footer/footer";
 
 body {
-  font-family: Oswald, sans-serif;
+  font-family: 'Open Sans', 'lato', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
 }
 
 .container {
-  width: 100%;
-  max-width: 1180px;
   margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
+  width: 100%;
+  max-width: 1220px;
+  padding: 0 20px;
 }
 
-.title-block {
-  margin: 0 0 20px 0;
-
-  &_one {
-    font-size: 30px;
-    text-transform: uppercase;
-  }
-  &_two {
-    font-size: 25px;
-    max-width: 500px;
-  }
+.hidden {
+  display: none;
 }
+
+// breadcrumbs
+
+.breadcrumbs {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  list-style-type: none;
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+.breadcrumbs-item::before, .breadcrumbs-item-1::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 66px;
+  transform: rotate(45deg);
+  width: 2px;
+  height: 8px;
+  background-color:  #1E0606;
+}
+
+.breadcrumbs-item::after, .breadcrumbs-item-1::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 66px;
+  transform: rotate(-45deg);
+  width: 2px;
+  height: 8px;
+  background-color:  #1E0606;
+}
+
+.breadcrumbs-item-2::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 170px;
+  transform: rotate(45deg);
+  width: 2px;
+  height: 8px;
+  background-color:  #1E0606;
+}
+
+.breadcrumbs-item-2::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 170px;
+  transform: rotate(-45deg);
+  width: 2px;
+  height: 8px;
+  background-color:  #1E0606;
+}
+
+.breadcrumbs-link {
+  font-family: 'Crimson Text', 'tinos', serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 25px;
+  color: #1E0606;
+}
+
+.breadcrumbs-link:hover, .breadcrumbs-link:focus {
+  opacity: .75;
+}
+
+.breadcrumbs-link:active {
+  color: #1E0606;
+  opacity: 1;
+}
+
+.breadcrumbs-active {
+  font-family: 'Crimson Text', 'tinos', serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 25px;
+  color: #1E0606;
+  opacity: .5;
+}
+
+// Подключение компонентов
+@import "./header/header";
+@import "./footer/footer";
+@import "./button/button";
+@import "./form/form";
+@import "./link/link";
+@import "./pagination/pagination";
+
