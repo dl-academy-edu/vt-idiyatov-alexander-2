@@ -1,0 +1,41 @@
+
+.blog {
+  width: 400px;
+  padding: 8px 10px;
+
+  &__date {
+    font-family: 'Roboto', 'news-roman', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: #818181;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 17px;
+  }
+  
+  &__title {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -8px;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    color: #1E0606;
+  }
+  
+  &__link:hover &__title_hover {
+    text-decoration: underline;
+    text-decoration-color: #1E0606;
+  }
+  
+  &__text {
+    font-size: 18px;
+    line-height: 25px;
+    color: #1E0606;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+  }
+}
+

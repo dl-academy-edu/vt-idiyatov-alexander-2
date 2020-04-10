@@ -1,7 +1,7 @@
 var popup = document.querySelector(".modal-bg_js");
-var buttonOpen = document.querySelector(".header-button_js");
+var buttonOpen = document.querySelector(".header__search-button_js");
 var buttonClose = document.querySelector(".modal-close_js");
-var input = document.querySelector(".form-input_js");
+var input = document.querySelector(".contact-us-form__input_js");
 
 buttonOpen.addEventListener("click", function () {
   popup.classList.remove("modal-bg_close");

@@ -2,66 +2,91 @@
   display: flex;
   padding-top: 50px;
   padding-bottom: 40px;
-}
 
-.header-log {
-  width: 110px;
-  height: 54px;
-  opacity: 1;
-}
+  &__logo {
+    width: 110px;
+    height: 54px;
+    opacity: 1;
 
-.header-log:hover, .contact-link:hover, .link:hover, .header-button:hover,
-.header-log:focus, .contact-link:focus, .link:focus, .header-button:focus {
-  opacity: 0.5;
-  outline: none;
-}
+    &:hover, &:focus {
+      opacity: $hover;
+      outline: none;
+    }
 
-.header-log:active, .contact-link:active, .link:active, .header-button:active {
-  opacity: 0.1;
-}
+    &:active {
+      opacity: $active;
+    }
+  }
 
-.header-nav {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
+  &__nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  &__list-links {
+    display: flex;
+    margin-left: 60px;
+    align-items: center;
+    list-style-type: none;
+    padding-left: 0;
+  }
 
-.header-list-links {
-  display: flex;
-  margin-left: 60px;
-  align-items: center;
-  list-style-type: none;
-  padding-left: 0;
-}
+  &__list-contacts {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    list-style-type: none;
+    padding-left: 0;
+  }
 
-.header-list-contacts {
-  display: flex;
-  justify-content: space-between;  
-  align-items: center;
-  list-style-type: none;
-  padding-left: 0;
-}
+  &__link {
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #1E0606;
+    margin-right: 20px;
+    opacity: 1;
+    
+    &:hover, &:focus {
+      opacity: $hover;
+      outline: none;
+    }
 
-.link {
-  font-size: 14px;
-  line-height: 19px;
-  text-transform: uppercase;
-  color: #1E0606;
-  margin-right: 20px;
-  opacity: 1;
+    &:active {
+      opacity: $active;
+    }    
+  }
 
-}
+  &__search-button {
+    opacity: 1;
 
-.header-button {
-  opacity: 1;
-}
+    &:hover, &:focus {
+      opacity: $hover;
+      outline: none;
+    }
 
-.contact-link {
-  font-weight: bold;
-  margin-left: 26px;
-  font-size: 14px;
-  line-height: 19px;  
-  text-transform: uppercase;
-  color: #1E0606;  
-  opacity: 1;
+    &:active {
+      opacity: $active;
+    }    
+  }
+
+  &__contact-link {
+    font-weight: bold;
+    margin-left: 26px;
+    font-size: 14px;
+    line-height: 19px;  
+    text-transform: uppercase;
+    color: #1E0606;  
+    opacity: 1;
+
+    &:hover, &:focus {
+      opacity: $hover;
+      outline: none;
+    }
+
+    &:active {
+      opacity: $active;
+    }    
+  }
 }

@@ -9,14 +9,15 @@
   background-color:  #000000;
   border: 0;
   outline: none;
+
+  &:hover, &:focus {
+    background-color: #C29974;
+    cursor: pointer;
+  }
+  
+  &:active {
+    background-color: #CFAF91;
+    cursor: none;
+  }
 }
 
-.button:hover, .button:focus {
-  background-color: #C29974;
-  cursor: pointer;
-}
-
-.button:active {
-  background-color: #CFAF91;
-  cursor: none;
-}

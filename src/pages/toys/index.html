@@ -18,69 +18,69 @@
       <h1 class="title container">Toy for kids</h1>
       <div class="breadcrumbs container">
         <ul class="breadcrumbs">
-          <li><a class="breadcrumbs-link" href="/index.html">Home</a></li>
-          <li class="breadcrumbs-item-1"></li>
-          <li><a class="breadcrumbs-link" href="/folders/catalog/index.html">Catalog</a></li>
-          <li class="breadcrumbs-item-2"></li>
-          <li class="breadcrumbs-active">Toys</li>
+          <li><a class="breadcrumbs__link" href="/index.html">Home</a></li>
+          <li class="breadcrumbs__item-1"></li>
+          <li><a class="breadcrumbs__link" href="/folders/catalog/index.html">Catalog</a></li>
+          <li class="breadcrumbs__item-2"></li>
+          <li class="breadcrumbs__active">Toys</li>
         </ul>
       </div>
       <form class="form" name="order" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
-        <div class="form-order container">
+        <div class="form__order container">
         <fieldset class="form-cost">
-          <legend class="form-title">Cost</legend>
-            <label class="form-text">
-              <input class="input-cost" type="range" name="cost">
+          <legend class="form__title">Cost</legend>
+            <label class="form__text">
+              <input class="form-cost__range" type="range" name="cost">
             </label>          
         </fieldset>
-  
+
         <fieldset class="form-color">
-          <legend class="form-title">Color</legend>
-            <label class="label-color form-text">
-              <input class="input-color" type="checkbox" name="color" value="black">
-              <span class="checkbox-color-indicator">Black</span>                
-            </label>          
-            <label class="label-color form-text">
-              <input class="input-color" type="checkbox" name="color" value="blue">
-              <span class="checkbox-color-indicator">Blue</span>                
-            </label>
-            <label class="label-color form-text">
-              <input class="input-color" type="checkbox" name="color" value="green">
-              <span class="checkbox-color-indicator">Green</span>                
-            </label>
-            <label class="label-color form-text">
-              <input class="input-color" type="checkbox" name="color" value="white">
-              <span class="checkbox-color-indicator">White</span>                
-            </label>
+          <legend class="form__title">Color</legend>
+          @@include('form-color/index.html', {
+            "value": "black",
+            "color": "Black"
+          })
+          @@include('form-color/index.html', {
+            "value": "blue",
+            "color": "Blue"
+          })
+          @@include('form-color/index.html', {
+            "value": "green",
+            "color": "Green"
+          })
+          @@include('form-color/index.html', {
+            "value": "white",
+            "color": "White"
+          })
         </fieldset>  
   
         <fieldset class="form-delivery">
-          <legend class="form-title">Delivery</legend>
-            <label class="label-delivery form-text">
-              <input class="input-delivery" type="radio" name="shipping" value="free" checked>
-              <span class="radio-delivery-indicator">Free shipping</span>                
-            </label>          
-            <label class="label-delivery form-text">
-              <input class="input-delivery" type="radio" name="shipping" value="fast">
-              <span class="radio-delivery-indicator">Fast shipping</span>                
-            </label>
-          </fieldset>  
+          <legend class="form__title">Delivery</legend>
+          @@include('form-delivery/index.html', {
+            "value": "free",
+            "text": "Free shipping"
+          })
+          @@include('form-delivery/index.html', {
+            "value": "fast",
+            "text": "Fast shipping"
+          })
+        </fieldset>  
   
         <fieldset class="form-amount">
-          <legend class="form-title">Amount</legend>
+          <legend class="form__title">Amount</legend>
             <div class="container-amount">
-              <label class="label-amount form-text" style="text-decoration: none;">
-                <input class="input-amount" type="radio" name="amount" value="0-5" checked>
-                <span class="radio-amount-indicator">0-5</span>
-              </label>          
-              <label class="label-amount form-text" style="text-decoration: none;">
-                <input class="input-amount" type="radio" name="amount" value="10-20">
-                <span class="radio-amount-indicator">10-20</span>
-              </label>
-              <label class="label-amount form-text" style="text-decoration: none;">
-                <input class="input-amount" type="radio" name="amount" value="20-50">
-                <span class="radio-amount-indicator">20-50</span>
-              </label>
+              @@include('form-amount/index.html', {
+                "value": "0-5",
+                "text": "0-5"
+              })
+              @@include('form-amount/index.html', {
+                "value": "10-20",
+                "text": "10-20"
+              })
+              @@include('form-amount/index.html', {
+                "value": "20-50",
+                "text": "20-50"
+              })
             </div>
         </fieldset>
         @@include('button/index.html', {
@@ -91,49 +91,43 @@
       </form>
       <section class="container">
         <h2 class="hidden">Toys</h2>
-        <ul class="toys-list">
-          <li>            
-            <a class="toys-link"  href="#">
-              <img class="toys-photo" src="../../static/images/toy-1.jpg" alt="bean bag" width="380" height="385">
-              <h3 class="toys-title">SHARKY BEAN BAG CHAIR COVER</h3>
-              <p class="toys-price">$60.00 USD</p>
-            </a>
-          </li>
-          <li>            
-            <a class="toys-link" href="#">
-              <img class="toys-img" src="../../static/images/toy-2.jpg" alt="deco frames" width="380" height="385">
-              <h3 class="toys-title">BRASS DECO FRAMES</h3> 
-              <p class="toys-price">$66.00 USD</p>
-            </a>
-          </li>
-          <li>            
-            <a class="toys-link" href="#">
-              <img class="toys-img" src="../../static/images/toy-3.jpg" alt="apron" width="380" height="385">
-              <h3 class="toys-title">CIBO FULL APRON</h3> 
-              <p class="toys-price">$60.00 USD</p>
-            </a>            
-          </li>
-          <li>            
-            <a class="toys-link" href="#">
-              <img class="toys-img" src="../../static/images/toy-4.jpg" alt="gumball machine" width="380" height="385">
-              <h3 class="toys-title">GATCHA GATCHA GUMBALL MACHINE</h3> 
-              <p class="toys-price">$56.00 USD</p>
-            </a>            
-          </li>
-          <li>            
-            <a class="toys-link" href="#">
-              <img class="toys-img" src="../../static/images/toy-5.jpg" alt="candle" width="380" height="385">
-              <h3 class="toys-title">CHRISTMAS ADVENT SCENTED CANDLE</h3> 
-              <p class="toys-price">$29.00 USD</p>
-            </a>            
-          </li>
-          <li>            
-            <a class="toys-link" href="#">
-              <img class="toys-img" src="../../static/images/toy-6.jpg" alt="tea light" width="380" height="385">
-              <h3 class="toys-title">TANGLE SPINNING TEA LIGHT</h3> 
-              <p class="toys-price">$56.00 USD</p>
-            </a>            
-          </li>
+        <ul class="toys">
+          @@include('toys/index.html', {
+            "img": "toy-1.jpg",
+            "alt": "bean bag",
+            "title": "SHARKY BEAN BAG CHAIR COVER",
+            "price": "$60.00 USD"
+          })
+          @@include('toys/index.html', {
+            "img": "toy-2.jpg",
+            "alt": "deco frames",
+            "title": "BRASS DECO FRAMES",
+            "price": "$66.00 USD"
+          })
+          @@include('toys/index.html', {
+            "img": "toy-3.jpg",
+            "alt": "apron",
+            "title": "CIBO FULL APRON",
+            "price": "$60.00 USD"
+          })
+          @@include('toys/index.html', {
+            "img": "toy-4.jpg",
+            "alt": "gumball machine",
+            "title": "GATCHA GATCHA GUMBALL MACHINE",
+            "price": "$56.00 USD"
+          })
+          @@include('toys/index.html', {
+            "img": "toy-5.jpg",
+            "alt": "candle",
+            "title": "CHRISTMAS ADVENT SCENTED CANDLE",
+            "price": "$29.00 USD"
+          })
+          @@include('toys/index.html', {
+            "img": "toy-6.jpg",
+            "alt": "tea light",
+            "title": "TANGLE SPINNING TEA LIGHT",
+            "price": "$56.00 USD"
+          })           
         </ul>
       </section>
       @@include('pagination/index.html')

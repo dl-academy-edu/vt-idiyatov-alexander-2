@@ -7,6 +7,10 @@ body {
   margin: 0;
 }
 
+$hover: .5;
+
+$active: .2;
+
 a {
   text-decoration: none;
 }
@@ -45,76 +49,76 @@ img {
   list-style-type: none;
   margin-left: 20px;
   padding-left: 0;
-}
 
-.breadcrumbs-item::before, .breadcrumbs-item-1::before {
-  content: "";
-  position: absolute;
-  top: 11px;
-  left: 66px;
-  transform: rotate(45deg);
-  width: 2px;
-  height: 8px;
-  background-color:  #1E0606;
-}
+  &__link {
+    font-family: 'Crimson Text', 'tinos', serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    color: #1E0606;
 
-.breadcrumbs-item::after, .breadcrumbs-item-1::after {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 66px;
-  transform: rotate(-45deg);
-  width: 2px;
-  height: 8px;
-  background-color:  #1E0606;
-}
+    &:hover, &:focus {
+      opacity: .75;
+    }
 
-.breadcrumbs-item-2::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 170px;
-  transform: rotate(45deg);
-  width: 2px;
-  height: 8px;
-  background-color:  #1E0606;
-}
+    &:active {
+      color: #1E0606;
+      opacity: 1;
+    }  
+  }
 
-.breadcrumbs-item-2::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 170px;
-  transform: rotate(-45deg);
-  width: 2px;
-  height: 8px;
-  background-color:  #1E0606;
-}
+  &__active {
+    font-family: 'Crimson Text', 'tinos', serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    color: #1E0606;
+    opacity: .5;    
+  }
 
-.breadcrumbs-link {
-  font-family: 'Crimson Text', 'tinos', serif;
-  font-style: italic;
-  font-size: 20px;
-  line-height: 25px;
-  color: #1E0606;
-}
-
-.breadcrumbs-link:hover, .breadcrumbs-link:focus {
-  opacity: .75;
-}
-
-.breadcrumbs-link:active {
-  color: #1E0606;
-  opacity: 1;
-}
-
-.breadcrumbs-active {
-  font-family: 'Crimson Text', 'tinos', serif;
-  font-style: italic;
-  font-size: 20px;
-  line-height: 25px;
-  color: #1E0606;
-  opacity: .5;
+  &__item::before, &__item-1::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 66px;
+    transform: rotate(45deg);
+    width: 2px;
+    height: 8px;
+    background-color:  #1E0606;
+  }
+  
+  &__item::after, &__item-1::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 66px;
+    transform: rotate(-45deg);
+    width: 2px;
+    height: 8px;
+    background-color:  #1E0606;
+  }
+  
+  &__item-2::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 170px;
+    transform: rotate(45deg);
+    width: 2px;
+    height: 8px;
+    background-color:  #1E0606;
+  }
+  
+  &__item-2::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 170px;
+    transform: rotate(-45deg);
+    width: 2px;
+    height: 8px;
+    background-color:  #1E0606;
+  }
 }
 
 // Подключение компонентов
@@ -124,4 +128,9 @@ img {
 @import "./form/form";
 @import "./link/link";
 @import "./pagination/pagination";
+@import "./blog/blog";
+@import "./toys/toys";
+@import "./form-color/form-color";
+@import "./form-delivery/form-delivery";
+@import "./form-amount/form-amount";
 
