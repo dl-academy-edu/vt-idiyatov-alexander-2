@@ -1,12 +1,14 @@
 
+@import "../../components/var";
 
 .title {
-  font-family: 'Montserrat', 'Open Sans', sans-serif;
-  font-weight: bold;
-  font-size: 40px;
+  @extend %montserrat;
+  // font-family: 'Montserrat', 'Open Sans', sans-serif;
+  // font-weight: bold;
+  font-size: $titleSize;
   line-height: 49px;
   text-transform: uppercase;
-  color: #1E0606;
+  color: $black;
   margin-top: 19px;
   margin-bottom: 8px;
 }
@@ -15,6 +17,10 @@
   min-width: 167px;
   margin-top: 8px;
   margin-bottom: 24px;
+
+  &__item-2_hidden {
+    display: none;
+  }
 }
 
 .form-support {
@@ -36,15 +42,16 @@
 .support {
 
   &__text {
-    font-size: 16px;
+    font-size: $textSize;
     line-height: 22px;
-    color: #1E0606;
+    color: $black;
     width: 380px;
     margin-top: 0;
     padding-bottom: 4px;
 
     &_large {
-      font-family: 'Montserrat', 'Open Sans', sans-serif;
+      @extend %montserrat;
+      // font-family: 'Montserrat', 'Open Sans', sans-serif;
       font-weight: 600;
       font-size: 26px;
       line-height: 34px;

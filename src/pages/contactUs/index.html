@@ -16,12 +16,10 @@
     @@include('header/index.html')
     <main>
       <h1 class="title container">Contact Us</h1>
-      <div class="breadcrumbs container">
-        <ul class="breadcrumbs">
-          <li><a class="breadcrumbs__link" href="/index.html">Home</a></li>
-          <li class="breadcrumbs__item"></li>
-          <li class="breadcrumbs__active">Contact Us</li>
-        </ul>
+      <div class="container">
+        @@include('breadcrumbs/index.html', {
+          "text-2": "Contact us"
+          })
       </div>
       <div class="form-support container">
         @@include('form/index.html')

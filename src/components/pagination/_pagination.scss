@@ -1,3 +1,6 @@
+
+@import "../var";
+
 .pagination {
   display: flex;
   justify-content: space-between;
@@ -12,27 +15,34 @@
   }
   
   &__link {
-    font-family: 'Montserrat', 'Open Sans', sans-serif;
-    font-weight: bold;
-    font-size: 16px;
+    @extend %montserrat;
+    // font-family: 'Montserrat', 'Open Sans', sans-serif;
+    // font-weight: bold;
+    font-size: $textSize;
     line-height: 20px;
     text-transform: uppercase;
-    color: #1E0606;
+    color: $black;
 
     &:hover, &:focus {
-      color: #1E0606;
+      color: $black;
       opacity: 0.5;
       outline: none;
     }
     
     &:active {
-      color: #1E0606;
+      color: $black;
       opacity: 1;
       cursor: none;
     }
 
     &_active {
-      color: #C29974;
+      color: $brown;
+
+      &:hover {
+        opacity: 1;
+        outline: none;
+        color: $brown;
+      }
     }
   }
 
@@ -53,14 +63,14 @@
     }  
 
     &_left:hover::before, &_left:focus::before {
-      border-left: 4px solid #C29974;
-      border-bottom: 4px solid #C29974;
+      border-left: 4px solid $brown;
+      border-bottom: 4px solid $brown;
       cursor: pointer;
     }
     
     &_left:active::before {
-      border-left: 4px solid #C29974;
-      border-bottom: 4px solid #C29974;
+      border-left: 4px solid $brown;
+      border-bottom: 4px solid $brown;
       cursor: none;
     }
     
@@ -76,14 +86,14 @@
     }
 
     &_right:hover::before, &_right:focus::before {
-      border-right: 4px solid #C29974;
-      border-bottom: 4px solid #C29974;
+      border-right: 4px solid $brown;
+      border-bottom: 4px solid $brown;
       cursor: pointer;
     }
     
     &_right:active::before {
-      border-right: 4px solid #C29974;
-      border-bottom: 4px solid #C29974;
+      border-right: 4px solid $brown;
+      border-bottom: 4px solid $brown;
       cursor: none;
     }  
   } 

@@ -16,23 +16,19 @@
     @@include('header/index.html')
     <main>
       <h1 class="title container">Category Products</h1>
-      <div class="breadcrumbs container">
-        <ul class="breadcrumbs">
-          <li>
-            <a class="breadcrumbs__link" href="/index.html">Home</a>
-          </li>
-          <li class="breadcrumbs__item"></li>
-          <li class="breadcrumbs__active">Catalog</li>
-        </ul>
+      <div class="container">
+        @@include('breadcrumbs/index.html', {
+          "text-2": "Catalog"
+          })
       </div>
       <div class="container">
       <section>
         <h2 class="hidden">products</h2>
           <div class="products">          
             <a class="products__link products__link_kids" href="#">
-              <span class="products__link__text">APPAREL KIDS</span></a>
+              <span class="products__link_text">APPAREL KIDS</span></a>
             <a class="products__link products__link_shop" href="#">
-              <span class="products__link__text">HOLIDAY SHOP</span></a>
+              <span class="products__link_text">HOLIDAY SHOP</span></a>
             <a class="products__link products__link_toys" href="../../pages/toys/index.html">
               TOYS</a>
             <a class="products__link products__link_accessories" href="#">
@@ -40,7 +36,7 @@
             <a class="products__link products__link_sale" href="#">
               SALE</a>
             <a class="products__link products__link_apparel-adults" href="#">
-              <span class="products__link__text">APPAREL ADULTS</span></a>    
+              <span class="products__link_text">APPAREL ADULTS</span></a>    
           </div>
       </section>
       <section class="description">

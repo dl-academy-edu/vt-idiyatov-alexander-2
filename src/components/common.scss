@@ -40,87 +40,6 @@ img {
   display: none;
 }
 
-// breadcrumbs
-
-.breadcrumbs {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  list-style-type: none;
-  margin-left: 20px;
-  padding-left: 0;
-
-  &__link {
-    font-family: 'Crimson Text', 'tinos', serif;
-    font-style: italic;
-    font-size: 20px;
-    line-height: 25px;
-    color: #1E0606;
-
-    &:hover, &:focus {
-      opacity: .75;
-    }
-
-    &:active {
-      color: #1E0606;
-      opacity: 1;
-    }  
-  }
-
-  &__active {
-    font-family: 'Crimson Text', 'tinos', serif;
-    font-style: italic;
-    font-size: 20px;
-    line-height: 25px;
-    color: #1E0606;
-    opacity: .5;    
-  }
-
-  &__item::before, &__item-1::before {
-    content: "";
-    position: absolute;
-    top: 11px;
-    left: 66px;
-    transform: rotate(45deg);
-    width: 2px;
-    height: 8px;
-    background-color:  #1E0606;
-  }
-  
-  &__item::after, &__item-1::after {
-    content: "";
-    position: absolute;
-    top: 6px;
-    left: 66px;
-    transform: rotate(-45deg);
-    width: 2px;
-    height: 8px;
-    background-color:  #1E0606;
-  }
-  
-  &__item-2::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 170px;
-    transform: rotate(45deg);
-    width: 2px;
-    height: 8px;
-    background-color:  #1E0606;
-  }
-  
-  &__item-2::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 170px;
-    transform: rotate(-45deg);
-    width: 2px;
-    height: 8px;
-    background-color:  #1E0606;
-  }
-}
-
 // Подключение компонентов
 @import "./header/header";
 @import "./footer/footer";
@@ -128,9 +47,6 @@ img {
 @import "./form/form";
 @import "./link/link";
 @import "./pagination/pagination";
-@import "./blog/blog";
-@import "./toys/toys";
-@import "./form-color/form-color";
-@import "./form-delivery/form-delivery";
-@import "./form-amount/form-amount";
+@import "./breadcrumbs/breadcrumbs";
+
 

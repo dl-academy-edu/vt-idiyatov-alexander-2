@@ -1,11 +1,14 @@
 
+@import "../../components/var";
+
 .title {
-  font-family: 'Montserrat', 'Open Sans', sans-serif;
-  font-weight: bold;
-  font-size: 40px;
+  @extend %montserrat;
+  // font-family: 'Montserrat', 'Open Sans', sans-serif;
+  // font-weight: bold;
+  font-size: $titleSize;
   line-height: 49px;
   text-transform: uppercase;
-  color: #1E0606;
+  color: $black;
   margin-top: 17px;
   margin-bottom: 10px;
 }
@@ -14,6 +17,10 @@
   min-width: 146px;
   margin-top: 7px;
   margin-bottom: 24px;
+
+  &__item-2_hidden {
+    display: none;
+  }
 }
 
 .products {  
@@ -50,7 +57,7 @@
       cursor: none;
     } 
 
-    &__text {
+    &_text {
       max-width: 160px;
     }
 
@@ -91,19 +98,20 @@
   &__title {
     margin: 25px 0;
     padding-top: 2px;
-    font-family: 'Montserrat', 'Open Sans', sans-serif;
-    font-weight: bold;
+    @extend %montserrat;
+    // font-family: 'Montserrat', 'Open Sans', sans-serif;
+    // font-weight: bold;
     font-size: 38px;
     line-height: 46px;
     text-transform: uppercase;
-    color: #1E0606  
+    color: $black;  
   }
   
   &__text {
     margin: 15px 0;
-    font-size: 16px;
+    font-size: $textSize;
     line-height: 22px;
-    color: #1E0606;
+    color: $black;
   }
 }
 

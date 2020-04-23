@@ -1,12 +1,14 @@
 
+@import "../../components/var";
 
 .title {
-  font-family: 'Montserrat', 'Open Sans', sans-serif;
-  font-weight: bold;
-  font-size: 40px;
+  @extend %montserrat;
+  // font-family: 'Montserrat', 'Open Sans', sans-serif;
+  // font-weight: bold;
+  font-size: $titleSize;
   line-height: 49px;
   text-transform: uppercase;
-  color: #1E0606;
+  color: $black;
   margin-top: 20px;
   margin-bottom: 8px;
 }
@@ -15,64 +17,74 @@
   min-width: 127px;
   margin-top: 7px;
   margin-bottom: 15px;
+
+  &__item-2_hidden {
+    display: none;
+  }
 }
 
-.blogs-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 24px -10px;
-  list-style-type: none;
-  padding-left: 0;
+.blog {
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 24px -10px;
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  &__item {
+    width: 400px;
+    padding: 8px 10px;
+  }  
+
+  &__date {
+    font-family: $roboto;
+    font-size: $textSize;
+    line-height: 19px;
+    color: #818181;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 17px;
+  }
+  
+  &__title {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -8px;
+    @extend %montserrat;
+    // font-family: 'Montserrat', 'Open Sans', sans-serif;
+    // font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    color: $black;
+  }
+  
+  &__link:hover &__title_hover {
+    text-decoration: underline;
+    text-decoration-color: $black;
+  }
+  
+  &__text {
+    font-size: 18px;
+    line-height: 25px;
+    color: $black;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+  }
 }
-
-// .blog {
-//   width: 400px;
-//   padding: 8px 10px;
-// }
-
-// .blog-date {
-//   font-family: 'Roboto', 'news-roman', sans-serif;
-//   font-size: 16px;
-//   line-height: 19px;
-//   color: #818181;
-//   display: flex;
-//   flex-wrap: wrap;
-//   padding-top: 17px;
-// }
-
-// .blog-title {
-//   display: flex;
-//   flex-wrap: wrap;
-//   margin-top: -8px;
-//   font-family: 'Montserrat', 'Open Sans', sans-serif;
-//   font-weight: bold;
-//   font-size: 24px;
-//   line-height: 31px;
-//   color: #1E0606;
-// }
-
-// .blog-link:hover .blog-title-hover {
-//   text-decoration: underline;
-//   text-decoration-color: #1E0606;
-// }
-
-// .blog-text {
-//   font-size: 18px;
-//   line-height: 25px;
-//   color: #1E0606;
-//   display: flex;
-//   flex-wrap: wrap;
-//   margin-top: 15px;
-// }
 
 .pagination-links {
   padding-top: 2px;
   padding-bottom: 2px;
 }
 
-
 .pagination-list {
   margin: 0;
 }
+
+
+
 
