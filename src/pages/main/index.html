@@ -126,8 +126,10 @@
     </main> 
     @@include('footer/index.html')    
     <div class="modal-bg modal-bg_hidden modal-bg_js">
-      @@include('form/index.html')
-      
+      <div class="modal-bg__form">
+        @@include('form/index.html')
+        <button type="button" class="modal-close modal-close_js" aria-label="close modal"></button>
+      </div>
     </div>
   <script src="/script.js"></script>
 </body>   
