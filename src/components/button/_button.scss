@@ -9,6 +9,7 @@
   background-color:  #000000;
   border: 0;
   outline: none;
+  transition: all .4s;
 
   &:hover, &:focus {
     background-color: $brown;

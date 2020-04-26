@@ -10,6 +10,7 @@
     width: 110px;
     height: 54px;
     opacity: 1;
+    transition: all .4s;
 
     &:hover, &:focus {
       opacity: $hover;
@@ -27,20 +28,23 @@
     justify-content: space-between;
   }
   
-  &__list-links {
-    display: flex;
-    margin-left: 60px;
-    align-items: center;
-    list-style-type: none;
-    padding-left: 0;
-  }
+  &__list {
 
-  &__list-contacts {
-    display: flex;
-    justify-content: space-between;  
-    align-items: center;
-    list-style-type: none;
-    padding-left: 0;
+    &-links {
+      display: flex;
+      margin-left: 60px;
+      align-items: center;
+      list-style-type: none;
+      padding-left: 0;
+    }
+  
+    &-contacts {
+      display: flex;
+      justify-content: space-between;  
+      align-items: center;
+      list-style-type: none;
+      padding-left: 0;
+    }
   }
 
   &__link {
@@ -50,6 +54,7 @@
     color: $black;
     margin-right: 20px;
     opacity: 1;
+    transition: all .4s;
     
     &:hover, &:focus {
       opacity: $hover;
@@ -63,6 +68,7 @@
 
   &__search-button {
     opacity: 1;
+    transition: all .4s;
 
     &:hover, &:focus {
       opacity: $hover;
@@ -82,6 +88,7 @@
     text-transform: uppercase;
     color: $black;  
     opacity: 1;
+    transition: all .4s;
 
     &:hover, &:focus {
       opacity: $hover;

@@ -2,6 +2,13 @@
 @import "../var";
 
 .contact-us-form {
+  display: flex;
+  padding: 42px 40px;
+  width: 680px;
+  min-height: 542px;
+  flex-wrap: wrap;
+  background: #E5EAF8;
+  position: relative;
 
   &__label {
     position: relative;
@@ -13,7 +20,6 @@
     font-size: 14px;
     line-height: 16px;
     color: $black;
-    ;
     position: absolute;
     left: 0;
     top: -21px;
@@ -29,6 +35,7 @@
     line-height: 21px;
     color: $black;
     outline: none;
+    transition: all .4s;
 
     &:focus, &:hover {
       border: 2px solid rgba(0, 0, 0, 0.3);
@@ -107,7 +114,4 @@
     }
   }
 }
-
-
-
 

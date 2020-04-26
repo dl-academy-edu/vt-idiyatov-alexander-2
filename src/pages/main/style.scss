@@ -90,6 +90,7 @@
     width: 31px;
     border: 0;
     background-color: #D6CAC2;
+    transition: all .4s;
 
     &_active {
       width: 31px;
@@ -207,6 +208,7 @@
     opacity: 1;
     border: 0px;
     margin-right: 6px;
+    transition: all .4s;
 
     &:hover, &:focus {
       opacity: 0.7;
@@ -290,6 +292,7 @@
     color: $black;
     width: 120px;
     margin-bottom: 25px;
+    transition: all .4s;
 
     &:hover {
       opacity: .75;
@@ -351,13 +354,17 @@
     padding-left: 0;   
   }
 
-  &__link:hover {
-    opacity: .75;
-  }
+  &__link {
+    transition: all .4s;
+    
+    &:hover {
+      opacity: .75;
+    }
   
-  &__link:active {
-    opacity: 1;
-    cursor: none;
+    &:active {
+      opacity: 1;
+      cursor: none;
+    }
   }
 }
 
@@ -479,6 +486,11 @@
   &_hidden {
     display: none;
   }
+
+  &__form {
+    margin: auto;
+    position: relative;
+  }
 }
 
 .modal-close {
@@ -489,6 +501,7 @@
   top: -9px;
   right: -32px;
   background: transparent;
+  transition: all .4s;
 
   &:hover, &:focus {
     opacity: .5;
@@ -525,13 +538,3 @@
   }
 }
 
-.contact-us-form {
-  display: flex;
-  padding: 42px 40px;
-  width: 680px;
-  min-height: 542px;
-  flex-wrap: wrap;
-  background-color: #E5EAF8;
-  position: relative;
-  margin: auto;
-}

@@ -18,9 +18,13 @@
   margin-top: 7px;
   margin-bottom: 24px;
 
-  &__item-2_hidden {
+  &__item-2_hidden, &__link_hidden {
     display: none;
   }
+
+  // &__link_hidden {
+  //   display: none;
+  // }
 }
 
 .products {  
