@@ -1,0 +1,60 @@
+@import "../../components/var";
+
+.title {
+  @extend %montserrat;
+  // font-family: 'Montserrat', 'Open Sans', sans-serif;
+  // font-weight: bold;
+  font-size: $titleSize;
+  line-height: 49px;
+  text-transform: uppercase;
+  color: $black;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.breadcrumbs {
+  min-width: 167px;
+  margin-top: 7px;
+  margin-bottom: 15px;
+
+  &__item-2_hidden, &__link_hidden {
+    display: none;
+  }
+}
+
+@keyframes animation {
+
+  from, to {
+    background: url(../../static/images/1.svg);
+  }
+    
+  17%{
+    background: url(../../static/images/2.svg);
+  }
+
+  34%{
+    background: url(../../static/images/3.svg);
+  }
+
+  51%{
+    background: url(../../static/images/4.svg);
+  }
+
+  68% {
+    background: url(../../static/images/5.svg);
+  }
+
+  85% {
+    background: url(../../static/images/6.svg);
+  }
+}
+
+.background {
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 1400px;
+  height: 768px;
+  animation: animation 15s;
+  animation-iteration-count: infinite;
+}
