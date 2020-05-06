@@ -1,0 +1,32 @@
+<form class="contact-us-form" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+  <label class="contact-us-form__label">
+    <input class="contact-us-form__input contact-us-form__input_name contact-us-form__input_js" type="text" name="name" placeholder="Ivan Ivanov">
+    <span class="contact-us-form__title">Name</span>
+  </label>        
+
+<div class="form-contact">
+  <label class="contact-us-form__label">
+    <input class="contact-us-form__input contact-us-form__input_contact" type="text" name="phone">
+    <span class="contact-us-form__title">Phone</span>
+  </label>        
+
+  <label class="contact-us-form__label">
+    <input class="contact-us-form__input contact-us-form__input_contact" type="email" name="email">
+    <span class="contact-us-form__title">Email</span>
+  </label>        
+</div>
+  <label class="contact-us-form__label">
+    <textarea class="contact-us-form__input contact-us-form__input_message" name="message"></textarea>
+    <span class="contact-us-form__title">Message</span>
+  </label>
+  
+  <label class="form-consent">
+    <input class="form-consent__input-consent" type="checkbox" name="accept" value="data">
+    <span class="form-consent__input-consent_indicator">By clicking on the button, you consent
+      to the processing of your personal data</span>            
+  </label>        
+  @@include('button/index.html', {
+    "text": "submit",
+    "class": "contact-us-form__btn"
+  })
+</form>

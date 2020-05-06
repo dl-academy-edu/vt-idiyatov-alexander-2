@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Design Life Kids</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link href="/common.css" rel="stylesheet" />
+    <link href="../../pages/catalog/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,700i%7CMontserrat:300,700%7COpen+Sans:400,700%7CRoboto&display=swap" rel="stylesheet">    
+    <link href="/static/images/favicon.ico" rel="shortcut icon">
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main>
+      <h1 class="title container">Category Products</h1>
+      <div class="container">
+        @@include('breadcrumbs/index.html', {
+          "text-2": "Catalog"
+          })
+      </div>
+      <div class="container">
+      <section>
+        <h2 class="hidden">products</h2>
+          <div class="products">          
+            <a class="products__link products__link_kids" href="#">
+              <span class="products__link_text">APPAREL KIDS</span></a>
+            <a class="products__link products__link_shop" href="#">
+              <span class="products__link_text">HOLIDAY SHOP</span></a>
+            <a class="products__link products__link_toys" href="../../pages/toys/index.html">
+              TOYS</a>
+            <a class="products__link products__link_accessories" href="#">
+              ACCESSORIES</a>   
+            <a class="products__link products__link_sale" href="#">
+              SALE</a>
+            <a class="products__link products__link_apparel-adults" href="#">
+              <span class="products__link_text">APPAREL ADULTS</span></a>    
+          </div>
+      </section>
+      <section class="description">
+        <h2 class="description__title">Product Description</h2>
+        <p class="description__text">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and
+          almost really cry. You can even bathe her, just like a little sister.</p>
+        <p class="description__text">A toy with a height of 43 cm bends its knees, the head rotates, it can
+          stand upright. Such a doll will be an excellent choice for a gift for a girl from 4 years old.</p>
+        <p class="description__text">The set includes a miniature set of fashionable clothes, a hairbrush,
+          a bottle for water, a pair of hairpins and elastic bands for hair, as well as two bracelets:
+          one for the doll, the other for her young mistress.</p>
+      </section>
+      </div>
+    </main>
+    @@include('footer/index.html')
+  </body>
+</html>

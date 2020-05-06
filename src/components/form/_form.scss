@@ -1,0 +1,117 @@
+
+@import "../var";
+
+.contact-us-form {
+  display: flex;
+  padding: 42px 40px;
+  width: 680px;
+  min-height: 542px;
+  flex-wrap: wrap;
+  background: #E5EAF8;
+  position: relative;
+
+  &__label {
+    position: relative;
+    margin: 22px 0;    
+  }
+
+  &__title {
+    font-family: $roboto;
+    font-size: 14px;
+    line-height: 16px;
+    color: $black;
+    position: absolute;
+    left: 0;
+    top: -21px;
+  }
+
+  &__input {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    padding: 13px;
+    font-family: $roboto;
+    font-size: 18px;
+    line-height: 21px;
+    color: $black;
+    outline: none;
+    transition: all .4s;
+
+    &:focus, &:hover {
+      border: 2px solid rgba(0, 0, 0, 0.3);
+      padding: 12px;
+    }
+
+    &_name {
+      width: 600px;
+
+      &::-webkit-input-placeholder {
+        color: $black;
+        padding-left: 5px;
+      }
+    }
+
+    &_contact {
+      width: 290px;
+    }
+    
+    &_message {
+      width: 600px;
+      min-height: 150px;
+      resize: none;
+      margin-bottom: -6px;
+    }
+  }  
+}
+
+.form-contact {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  position: relative;
+}
+
+.form-consent {
+  font-family: $roboto;
+  font-size: 14px;
+  line-height: 20px;
+  color: $black;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+
+  &__input-consent {
+    position: absolute;
+    opacity: 0;
+
+    &:checked + &_indicator::before {
+      background: url(../../static/images/checkbox.svg) no-repeat #FFFFFF;
+    }
+
+    &:focus + &_indicator {
+      text-decoration: underline;
+    } 
+    
+    &:disabled + &_indicator::before {
+      border: 2px solid #E1CDBA;
+    }
+
+    &_indicator {
+      padding-left: 33px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        border: 2px solid #C29974;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+

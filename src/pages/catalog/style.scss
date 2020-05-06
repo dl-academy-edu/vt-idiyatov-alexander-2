@@ -1,0 +1,121 @@
+
+@import "../../components/var";
+
+.title {
+  @extend %montserrat;
+  // font-family: 'Montserrat', 'Open Sans', sans-serif;
+  // font-weight: bold;
+  font-size: $titleSize;
+  line-height: 49px;
+  text-transform: uppercase;
+  color: $black;
+  margin-top: 17px;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs {
+  min-width: 146px;
+  margin-top: 7px;
+  margin-bottom: 24px;
+
+  &__item-2_hidden, &__link_hidden {
+    display: none;
+  }
+
+  // &__link_hidden {
+  //   display: none;
+  // }
+}
+
+.products {  
+    display: flex;
+    flex-wrap: wrap;  
+
+  &__link {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+    width: 280px;
+    margin-bottom: 23px;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+
+    &:nth-child(4) {
+      margin-left: 200px;
+    }    
+    
+    &:hover {
+      text-decoration-line: underline;
+    }
+    
+    &:active {
+      text-decoration-line: underline;
+      cursor: none;
+    } 
+
+    &_text {
+      max-width: 160px;
+    }
+
+    &_kids {
+      background: url(../../static/images/product-1.png) center no-repeat #DBE4DB;
+      background-blend-mode: multiply;
+    }
+    
+    &_shop {
+      background: url(../../static/images/product-2.png) center no-repeat rgba(186, 142, 107, 0.3);
+    }
+    
+    &_toys {
+      background: url(../../static/images/product-3.png) center no-repeat #F8F2DA;
+      background-blend-mode: multiply;
+    }
+    
+    &_accessories {
+      background: url(../../static/images/product-4.png) center no-repeat rgba(9, 3, 79, 0.17);
+    }
+    
+    &_sale {
+      background: url(../../static/images/product-5.png) center no-repeat rgba(207, 68, 111, 0.25);
+      background-blend-mode: multiply;
+    }
+    
+    &_apparel-adults {
+      background: url(../../static/images/product-6.png) center no-repeat rgba(125, 151, 218, 0.2);
+      background-blend-mode: multiply;
+    }
+  }
+}
+
+.description {
+  width: 680px;
+  margin-left: 200px;
+
+  &__title {
+    margin: 25px 0;
+    padding-top: 2px;
+    @extend %montserrat;
+    // font-family: 'Montserrat', 'Open Sans', sans-serif;
+    // font-weight: bold;
+    font-size: 38px;
+    line-height: 46px;
+    text-transform: uppercase;
+    color: $black;  
+  }
+  
+  &__text {
+    margin: 15px 0;
+    font-size: $textSize;
+    line-height: 22px;
+    color: $black;
+  }
+}
+

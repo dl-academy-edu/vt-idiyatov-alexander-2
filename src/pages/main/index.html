@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Design Life Kids</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="/style.css">
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,700i%7CMontserrat:300,700%7COpen+Sans:400,700%7CRoboto&display=swap"
+    />    
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main>
+      <section class="poster container">
+        <h1 class="hidden">Poster</h1>
+        <div class="slider-nav">
+          <span class="slider-nav__text">01</span>
+          <div class="slider-nav__inner">
+            <button class="slider-nav__item slider-nav__item_active"></button>
+            <button class="slider-nav__item" type="button" aria-label="slider navigation"></button>
+            <button class="slider-nav__item" type="button" aria-label="slider navigation"></button>
+            <button class="slider-nav__item" type="button" aria-label="slider navigation"></button>
+          </div>
+        </div>
+      <div class="poster__information">    
+        <h2 class="poster__title">
+          THE OOH NOO COLLECTION
+        </h2>
+        <p class="poster__text">Designed in Slovenia</p>
+        @@include('link/index.html', {
+          "text": "EXPLORE NOW",
+          "href": "#",
+          "class": "poster__button"
+        })
+      </div> 
+        <img class="poster__img" src="/static/images/Poster.png" alt="poster" width="635" height="461">
+      </section>
+      <p class="poster__text poster__text_small">Free (continental) USA shipping on all orders of $100 USD or more!</p>
+      <section class="products container">
+        <h2 class="products__title">Category Products</h2>
+        <div class="products__links">          
+          <a class="products__link products__link_kids" href="#">
+            <span class="products__link_text">APPAREL KIDS</span></a>
+          <a class="products__link products__link_shop" href="#">
+            <span class="products__link_text">HOLIDAY SHOP</span></a>
+          <a class="products__link products__link_toys" href="#">
+            TOYS</a>
+          <a class="products__link products__link_accessories" href="#">
+            ACCESSORIES</a>         
+        </div>
+        <div class="slider-control">
+          <button class="slider-control__button slider-control__button_left" type="button" aria-label="arrow left"></button>
+          <button class="slider-control__button slider-control__button_right" type="button" aria-label="arrow right"></button>
+          <p class="products__text">Modern finds for the modern home. Curated goods by unique designers
+            around the world from fashion to furniture for kids and adults.</p>
+        </div>
+      </section>
+        
+      <section class="delivery container">
+        <img class="delivery__img" src="/static/images/delivery.jpg" alt="woman in dress"  width="480" height="559">
+      <div class="delivery__content">
+        <h2 class="delivery__title">Delivery</h2>
+      <div class="delivery__links">
+        <p class="delivery__link delivery__link_active">Delivery</p>
+        <a class="delivery__link" href="#">Guarantee</a>
+        <a class="delivery__link" href="#">Credit</a>
+      </div>
+        <p class="delivery__text">Some days i feel like i've been working on dlk my entire life
+          and there are other days that i am completely shocked that four years have flown by. It's simply magical.</p>
+        <p class="delivery__text">What started as an outlet to deal with the traumatic loss of my husband,
+          dlk has now become a truly happy place for me and i have you and all
+          of the beautiful designers that we work with to thank!</p>
+        @@include('link/index.html', {
+          "text": "LEARN MORE",
+          "href": "#",
+          "class": "delivery__button"
+        })
+      </div>
+      </section>
+      <section class="partners container">
+        <h2 class="hidden">partners</h2>
+        <ul class="partners__links">
+          <li>
+            <a class="partners__link" href="#"><img src="/static/images/partner-1.png" alt="mail.ru" aria-label="mail.ru" width="193" height="60"></a>
+          </li>
+          <li>
+            <a class="partners__link" href="#"><img src="/static/images/partner-2.png" alt="apple" aria-label="apple" width="179" height="61"></a>
+          </li>
+          <li>
+            <a class="partners__link" href="#"><img src="/static/images/partner-3.png" alt="eltex" aria-label="eltex" width="216" height="46"></a>
+          </li>
+          <li>
+            <a class="partners__link" href="#"><img src="/static/images/partner-4.png" alt="owox" aria-label="owox" width="211" height="40"></a>
+          </li>
+        </ul>
+      </section>
+      <div class="about-us-contacts container">
+      <article class="about-us">
+        <h2 class="about-us__title about-us__title_large">Design Life Kids</h2>
+        <h3 class="about-us__title about-us__title_middle">About Us</h3>
+        <p class="about-us__text">
+          Some days i feel like i've been working on dlk my entire life and
+          there are other days that i am completely shocked that four
+          years have flown by. It's simply magical.
+        </p>
+        @@include('link/index.html', {
+          "text": "buy now",
+          "href": "#",
+          "class": "about-us__button"
+        })
+      </article> 
+      <section class="contacts">
+        <h2 class="contacts__title">Contacts</h2>
+        <p class="contacts__text">Some days i feel like i've been working on dlk my entire life and
+          there are other days that i am completely shocked that four
+          years have flown by. It's simply magical.</p>
+        <div class="map-responsive">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6307.285808430329!2d-122.4229666!3d37.7749705!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sru!4v1583960301769!5m2!1sen!2sru" width="483" height="196" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        </section>
+      </div>  
+    </main> 
+    @@include('footer/index.html')    
+    <div class="modal-bg modal-bg_hidden modal-bg_js">
+      <div class="modal-bg__form">
+        @@include('form/index.html')
+        <button type="button" class="modal-close modal-close_js" aria-label="close modal"></button>
+      </div>
+    </div>
+  <script src="/script.js"></script>
+</body>   
+</html>

@@ -1,0 +1,118 @@
+
+@import "../var";
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 234px;
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  &__link {
+    @extend %montserrat;
+    // font-family: 'Montserrat', 'Open Sans', sans-serif;
+    // font-weight: bold;
+    font-size: $textSize;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $black;
+    transition: all .4s;
+
+    &:hover, &:focus {
+      color: $black;
+      opacity: 0.5;
+      outline: none;
+    }
+    
+    &:active {
+      color: $black;
+      opacity: 1;
+      cursor: none;
+    }
+
+    &_active {
+      color: $brown;
+
+      &:hover {
+        opacity: 1;
+        outline: none;
+        color: $brown;
+      }
+    }
+  }
+
+  &__arrow {
+    border: none;
+    background: white;
+    outline: none;
+    
+    &_left {
+
+      &::before {
+        content: "";
+        display: flex;
+        position: relative;
+        transform: rotate(45deg);
+        width: 21px;
+        height: 21px;
+        border-left: 4px solid rgba(30, 6, 6, 0.12);
+        border-bottom: 4px solid rgba(30, 6, 6, 0.12);
+        transition: all .4s;  
+      }  
+  
+      &:hover::before, &:focus::before {
+        border-left: 4px solid $brown;
+        border-bottom: 4px solid $brown;
+        cursor: pointer;
+      }
+      
+      &:active::before {
+        border-left: 4px solid $brown;
+        border-bottom: 4px solid $brown;
+        cursor: none;
+      }
+    }
+    
+    &_right {
+
+      &::before {
+        content: "";
+        display: flex;
+        position: relative;
+        transform: rotate(-45deg);
+        width: 21px;
+        height: 21px;
+        border-right: 4px solid rgba(30, 6, 6, 0.12);
+        border-bottom: 4px solid rgba(30, 6, 6, 0.12);
+        transition: all .4s;
+      }
+  
+      &:hover::before, &:focus::before {
+        border-right: 4px solid $brown;
+        border-bottom: 4px solid $brown;
+        cursor: pointer;
+      }
+      
+      &:active::before {
+        border-right: 4px solid $brown;
+        border-bottom: 4px solid $brown;
+        cursor: none;
+      }  
+    }
+  } 
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Design Life Kids</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="../../pages/toys/style.css">
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,700i%7CMontserrat:300,700%7COpen+Sans:400,700%7CRoboto&display=swap"
+    />    
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main>
+      <h1 class="title container">Toy for kids</h1>
+      <div class="container">
+        @@include('breadcrumbs/index.html', {
+          "href": "/folders/catalog/index.html",
+          "text": "Catalog",
+          "text-2": "Toys"
+          })
+      </div>
+      <form class="form" name="order" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+        <div class="form__order container">
+        <fieldset class="form__cost">
+          <legend class="form__title">Cost</legend>
+            <label class="form__text">
+              <input class="form__cost-range" type="range" name="cost">
+            </label>          
+        </fieldset>
+
+        <fieldset class="form__color">
+          <legend class="form__title">Color</legend>
+            <label class="form__color-label">
+              <input class="form__color-input" type="checkbox" name="color" value="black">
+              <span class="form__color-indicator">Black</span>                
+            </label>          
+            <label class="form__color-label">
+              <input class="form__color-input" type="checkbox" name="color" value="blue">
+              <span class="form__color-indicator">Blue</span>                
+            </label>
+            <label class="form__color-label">
+              <input class="form__color-input" type="checkbox" name="color" value="green">
+              <span class="form__color-indicator">Green</span>                
+            </label>
+            <label class="form__color-label">
+              <input class="form__color-input" type="checkbox" name="color" value="white">
+              <span class="form__color-indicator">White</span>                
+            </label>
+        </fieldset>  
+  
+        <fieldset class="form__delivery">
+          <legend class="form__title">Delivery</legend>
+            <label class="form__delivery-label">
+              <input class="form__delivery-input" type="radio" name="shipping" value="free" checked>
+              <span class="form__delivery-indicator">Free shipping</span>                
+            </label>          
+            <label class="form__delivery-label">
+              <input class="form__delivery-input" type="radio" name="shipping" value="fast">
+              <span class="form__delivery-indicator">Fast shipping</span>                
+            </label>
+          </fieldset>  
+  
+        <fieldset class="form__amount">
+          <legend class="form__title">Amount</legend>
+            <div class="form__amount-container">
+              <label class="form__amount-label" style="text-decoration: none;">
+                <input class="form__amount-input" type="radio" name="amount" value="0-5" checked>
+                <span class="form__amount-indicator">0-5</span>
+              </label>          
+              <label class="form__amount-label" style="text-decoration: none;">
+                <input class="form__amount-input" type="radio" name="amount" value="10-20">
+                <span class="form__amount-indicator">10-20</span>
+              </label>
+              <label class="form__amount-label" style="text-decoration: none;">
+                <input class="form__amount-input" type="radio" name="amount" value="20-50">
+                <span class="form__amount-indicator">20-50</span>
+              </label>
+            </div>
+        </fieldset>
+        @@include('button/index.html', {
+          "text": "Apply",
+          "class": "form__button"
+        })
+        </div>
+      </form>
+      <section class="container">
+        <h2 class="hidden">Toys</h2>
+        <ul class="toys">
+          <li>            
+            <a class="toys__link"  href="#">
+              <img class="toys__photo" src="../../static/images/toy-1.jpg" alt="bean bag" width="380" height="385">
+              <h3 class="toys__title">SHARKY BEAN BAG CHAIR COVER</h3>
+              <p class="toys__price">$60.00 USD</p>
+            </a>
+          </li>
+          <li>            
+            <a class="toys__link" href="#">
+              <img class="toys__img" src="../../static/images/toy-2.jpg" alt="deco frames" width="380" height="385">
+              <h3 class="toys__title">BRASS DECO FRAMES</h3> 
+              <p class="toys__price">$66.00 USD</p>
+            </a>
+          </li>
+          <li>            
+            <a class="toys__link" href="#">
+              <img class="toys__img" src="../../static/images/toy-3.jpg" alt="apron" width="380" height="385">
+              <h3 class="toys__title">CIBO FULL APRON</h3> 
+              <p class="toys__price">$60.00 USD</p>
+            </a>            
+          </li>
+          <li>            
+            <a class="toys__link" href="#">
+              <img class="toys__img" src="../../static/images/toy-4.jpg" alt="gumball machine" width="380" height="385">
+              <h3 class="toys__title">GATCHA GATCHA GUMBALL MACHINE</h3> 
+              <p class="toys__price">$56.00 USD</p>
+            </a>            
+          </li>
+          <li>            
+            <a class="toys__link" href="#">
+              <img class="toys__img" src="../../static/images/toy-5.jpg" alt="candle" width="380" height="385">
+              <h3 class="toys__title">CHRISTMAS ADVENT SCENTED CANDLE</h3> 
+              <p class="toys__price">$29.00 USD</p>
+            </a>            
+          </li>
+          <li>            
+            <a class="toys__link" href="#">
+              <img class="toys__img" src="../../static/images/toy-6.jpg" alt="tea light" width="380" height="385">
+              <h3 class="toys__title">TANGLE SPINNING TEA LIGHT</h3> 
+              <p class="toys__price">$56.00 USD</p>
+            </a>            
+          </li>
+        </ul>
+      </section>
+    @@include('pagination/index.html')
+    </main>
+    @@include('footer/index.html')
+    </body>
+</html>
+    

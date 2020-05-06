@@ -1,0 +1,52 @@
+
+@import "../../components/var";
+
+.title {
+  @extend %montserrat;
+  // font-family: 'Montserrat', 'Open Sans', sans-serif;
+  // font-weight: bold;
+  font-size: $titleSize;
+  line-height: 49px;
+  text-transform: uppercase;
+  color: $black;
+  margin-top: 19px;
+  margin-bottom: 8px;
+}
+
+.breadcrumbs {
+  min-width: 167px;
+  margin-top: 8px;
+  margin-bottom: 24px;
+
+  &__item-2_hidden, &__link_hidden {
+    display: none;
+  }
+}
+
+.form-support {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.support {
+
+  &__text {
+    font-size: $textSize;
+    line-height: 22px;
+    color: $black;
+    width: 380px;
+    margin-top: 0;
+    padding-bottom: 4px;
+
+    &_large {
+      @extend %montserrat;
+      // font-family: 'Montserrat', 'Open Sans', sans-serif;
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 34px;
+      text-transform: uppercase;
+      color: #C29974;
+    }
+  }
+}

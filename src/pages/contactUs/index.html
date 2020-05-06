@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Design Life Kids</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link href="/common.css" rel="stylesheet" />
+    <link href="../../pages/contactUs/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,700i%7CMontserrat:300,700%7COpen+Sans:400,700%7CRoboto&display=swap" rel="stylesheet">    
+    <link href="/static/images/favicon.ico" rel="shortcut icon">
+  </head>
+  <body>
+    @@include('header/index.html')
+    <main>
+      <h1 class="title container">Contact Us</h1>
+      <div class="container">
+        @@include('breadcrumbs/index.html', {
+          "text-2": "Contact us"
+          })
+      </div>
+      <div class="form-support container">
+        @@include('form/index.html')
+      <section class="support">
+        <h2 class="hidden">Support</h2>
+        <p class="support__text">Our support team are on-hand to assist with any
+          issues you are experiencing.</p>
+        <p class="support__text">Please use the form to contact us with your needs.
+          Send us a message and we'll respond as soon as possible.</p>
+        <p class="support__text support__text_large">An expert is waiting to help you!</p>
+      </section>
+      </div>
+    </main>
+    @@include('footer/index.html')
+  </body>
+</html>
