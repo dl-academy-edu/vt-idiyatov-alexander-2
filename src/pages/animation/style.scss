@@ -22,39 +22,209 @@
   }
 }
 
-@keyframes animation {
-
-  from, to {
-    background: url(../../static/images/1.svg);
-  }
-    
-  17%{
-    background: url(../../static/images/2.svg);
-  }
-
-  34%{
-    background: url(../../static/images/3.svg);
-  }
-
-  51%{
-    background: url(../../static/images/4.svg);
-  }
-
-  68% {
-    background: url(../../static/images/5.svg);
-  }
-
-  85% {
-    background: url(../../static/images/6.svg);
-  }
-}
-
-.background {
+.animation {
 
   display: flex;
   flex-wrap: wrap;
-  width: 1400px;
-  height: 768px;
-  animation: animation 15s;
-  animation-iteration-count: infinite;
+  position: relative;
 }
+
+.lantern {
+
+  position: absolute;
+  right: 185px;
+  bottom: 35px;
+  width: 160px;
+}
+
+.lantern1 {
+
+  position: absolute;
+  right: 10px;
+  bottom: 160px;
+  width: 110px;
+}
+
+.lantern2 {
+
+  position: absolute;
+  left: 440px;
+  bottom: 160px;
+  width: 110px;
+}
+
+.car1 {
+
+  position: absolute;
+  left: 70px;
+  bottom: 180px;
+  width: 180px;
+  
+}
+
+.car2 {
+
+  position: absolute;
+  left: 340px;
+  bottom: 180px;
+  width: 180px;
+}
+
+.car3 {
+
+  position: absolute;
+  left: 600px;
+  bottom: 195px;
+  width: 180px;
+}
+
+.car4 {
+
+  position: absolute;
+  right: 30px;
+  bottom: 180px;
+  width: 180px;
+}
+
+.man {
+
+  position: absolute;
+  left: 330px;
+  bottom: 30px;
+  width: 160px;
+
+  &__message {
+
+    position: absolute;
+    left: 320px;
+    bottom: 30px;
+    width: 170px;
+    animation: man-message 20s infinite;
+  }
+  
+  @keyframes man-message {
+  
+    0%, 17%, 34%, 68%, 85%, 100% {
+      opacity: 0;
+    } 
+  
+    51%{
+      opacity: 1;
+    }
+  }
+  
+  &__message1 {
+  
+    position: absolute;
+    left: 320px;
+    bottom: 300px;
+    width: 130px;
+    animation: man-message1 20s infinite;
+  }
+  
+  @keyframes man-message1 {
+  
+    0%, 17%, 34%, 51%, 68%, 100% {
+      opacity: 0;
+    } 
+  
+    85% {
+      opacity: 1;
+    }
+  }
+}
+
+
+
+.woman {
+
+  position: absolute;
+  left: 240px;
+  bottom: 30px;
+  width: 75px;
+
+  &__message {
+
+    position: absolute;
+    left: 170px;
+    bottom: 230px;
+    width: 130px;
+    animation: woman 20s infinite;
+  }
+  
+  @keyframes woman {
+  
+    0%, 34%, 51%, 68%, 85%, 100% {
+      opacity: 0;
+    } 
+  
+    17%{
+      opacity: 1;
+    }
+  }
+}
+
+
+
+.suitcases {
+  
+  position: absolute;
+  left: 240px;
+  bottom: 30px;
+  width: 145px;
+}
+
+.taxi {
+
+  position: absolute;
+  bottom: 80px;
+  width: 650px;
+  animation: taxi 20s infinite;
+
+  &__message {
+    position: absolute;
+    right: 290px;
+    bottom: 230px;
+    width: 130px;
+    animation: taxi-message 20s infinite ;
+    
+  }
+  
+  @keyframes taxi-message {
+  
+    0%, 17%, 34%, 51%, 79%, 100% {
+      opacity: 0;
+    }
+      
+    60%{
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes taxi {
+
+  0%, 17% {
+    right: -650px;
+  }
+    
+  34%{
+    right: -250px;
+  }
+
+  51%, 68% {
+    right: 0;
+  }
+
+  85% {
+    right: 1000px;
+  }
+
+  100% {
+    right: 2000px;
+  }
+}
+
+
+
+
