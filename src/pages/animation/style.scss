@@ -27,6 +27,8 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  width: 1400px;
+  overflow: hidden;
 }
 
 .lantern {
@@ -57,33 +59,84 @@
 
   position: absolute;
   left: 70px;
-  bottom: 180px;
+  bottom: 200px;
   width: 180px;
-  
+  animation: car1 5s infinite;
+
+}
+
+@keyframes car1 {
+
+  0% {
+    left: -200px;
+  }
+
+  100% {
+    left: 1600px;
+  }
 }
 
 .car2 {
 
   position: absolute;
   left: 340px;
-  bottom: 180px;
+  bottom: 210px;
   width: 180px;
+  animation: car2 6s ease-in-out infinite;
+
+}
+
+@keyframes car2 {
+
+  0%, 30% {
+    left: -200px;
+  }
+
+  100% {
+    left: 1600px;
+  }
 }
 
 .car3 {
 
   position: absolute;
-  left: 600px;
-  bottom: 195px;
+  left: 700px;
+  bottom: 220px;
   width: 180px;
+  animation: car3 4s ease-in infinite;
+
+}
+
+@keyframes car3 {
+
+  0%, 45% {
+    left: -200px;
+  }
+
+  100% {
+    left: 1600px;
+  }
 }
 
 .car4 {
 
   position: absolute;
   right: 30px;
-  bottom: 180px;
+  bottom: 200px;
   width: 180px;
+  animation: car4 8s linear infinite;
+
+}
+
+@keyframes car4 {
+
+  0%, 70% {
+    left: -200px;
+  }
+
+  100% {
+    left: 1600px;
+  }
 }
 
 .man {
@@ -93,22 +146,43 @@
   bottom: 30px;
   width: 160px;
 
+  &__hand {
+
+    position: absolute;
+    left:330px;
+    bottom: 185px;
+    width: 100px;
+    animation: man-hand 20s infinite;
+  }
+
+  @keyframes man-hand {
+  
+    0%, 17%, 51%, 68%, 85%, 100% {      
+      transform: rotate( 60deg );
+      transform-origin: 10px 10px;
+    } 
+  
+    34%{      
+      transform: rotate( -90deg );
+    }
+  }
+
   &__message {
 
     position: absolute;
     left: 320px;
-    bottom: 30px;
-    width: 170px;
+    bottom: 300px;
+    width: 130px;
     animation: man-message 20s infinite;
   }
   
   @keyframes man-message {
   
-    0%, 17%, 34%, 68%, 85%, 100% {
+    0%, 17%, 51%, 68%, 85%, 100% {
       opacity: 0;
     } 
   
-    51%{
+    34%{
       opacity: 1;
     }
   }
@@ -162,6 +236,27 @@
       opacity: 1;
     }
   }
+
+  &__hand {
+
+    position: absolute;
+    left: 260px;
+    bottom: 115px;
+    width: 50px;
+    animation: woman-hand 20s infinite;
+  }
+  
+  @keyframes woman-hand {
+  
+    0%, 34%, 51%, 68%, 85%, 100% {
+      transform: rotate( 0deg );
+      transform-origin: 10px 10px;
+    } 
+  
+    17%{
+      transform: rotate( -45deg );
+    }
+  }
 }
 
 
@@ -186,8 +281,7 @@
     right: 290px;
     bottom: 230px;
     width: 130px;
-    animation: taxi-message 20s infinite ;
-    
+    animation: taxi-message 20s infinite ;    
   }
   
   @keyframes taxi-message {
@@ -208,16 +302,8 @@
     right: -650px;
   }
     
-  34%{
-    right: -250px;
-  }
-
   51%, 68% {
     right: 0;
-  }
-
-  85% {
-    right: 1000px;
   }
 
   100% {
