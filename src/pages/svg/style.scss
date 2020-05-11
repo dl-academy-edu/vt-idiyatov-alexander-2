@@ -1,5 +1,14 @@
 
 .arrow {
-    margin-left: 50px;
-    margin-top: 50px;
+  
+  transition: .4s;
+
+  &:hover {
+    stroke: #C29974;
+  }  
+
+  &:active {
+    stroke: #C29974;
+    cursor: none;
+  }
 }

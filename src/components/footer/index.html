@@ -42,13 +42,20 @@
   </section>
   </div>
   <section class="footer-information container">
-    <div class="company-rating">
-      <p class="company-rating__text">Company Rating</p>
-      <span class="company-rating__star"></span>
-      <span class="company-rating__star"></span>
-      <span class="company-rating__star"></span>
-      <span class="company-rating__star"></span>
-      <span class="company-rating__star company-rating__star_deactive"></span>
+    <div class="company-rating"> 
+      <p class="company-rating__text">Company Rating</p>   
+      <form class="company-rating__star">       
+        <input type="radio" id="star-5" name="rating" value="5">
+        <label for="star-5">@@include('star/index.html')</label>	
+        <input type="radio" id="star-4" name="rating" value="4">
+        <label for="star-4">@@include('star/index.html')</label>    
+        <input type="radio" id="star-3" name="rating" value="3">
+        <label for="star-3">@@include('star/index.html')</label>  
+        <input type="radio" id="star-2" name="rating" value="2">
+        <label for="star-2">@@include('star/index.html')</label>    
+        <input type="radio" id="star-1" name="rating" value="1">
+        <label for="star-1">@@include('star/index.html')</label>
+      </form>
     </div>
     <p class="footer-information__copyright">Copyright © 2018 Dlk • Design Life Kids</p>
     <a class="footer-information__web-design-link" href="#">Web Design — Direct Line Development</a>

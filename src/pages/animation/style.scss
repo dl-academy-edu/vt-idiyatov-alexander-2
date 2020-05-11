@@ -27,8 +27,8 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  width: 1400px;
   overflow: hidden;
+  max-width: 1400px;
 }
 
 .lantern {
@@ -55,17 +55,7 @@
   width: 110px;
 }
 
-.car1 {
-
-  position: absolute;
-  left: 70px;
-  bottom: 200px;
-  width: 180px;
-  animation: car1 5s infinite;
-
-}
-
-@keyframes car1 {
+@keyframes car {
 
   0% {
     left: -200px;
@@ -76,67 +66,40 @@
   }
 }
 
+.car1 {
+
+  position: absolute;
+  left: 70px;
+  bottom:175px;
+  width: 180px;
+  animation: car 5s infinite;
+}
+
 .car2 {
 
   position: absolute;
   left: 340px;
-  bottom: 210px;
+  bottom: 180px;
   width: 180px;
-  animation: car2 6s ease-in-out infinite;
-
-}
-
-@keyframes car2 {
-
-  0%, 30% {
-    left: -200px;
-  }
-
-  100% {
-    left: 1600px;
-  }
+  animation: car 6s ease-in-out infinite;
 }
 
 .car3 {
 
   position: absolute;
   left: 700px;
-  bottom: 220px;
+  bottom: 185px;
   width: 180px;
-  animation: car3 4s ease-in infinite;
-
-}
-
-@keyframes car3 {
-
-  0%, 45% {
-    left: -200px;
-  }
-
-  100% {
-    left: 1600px;
-  }
+  animation: car 4s ease-in infinite;
 }
 
 .car4 {
 
   position: absolute;
   right: 30px;
-  bottom: 200px;
+  bottom: 175px;
   width: 180px;
-  animation: car4 8s linear infinite;
-
-}
-
-@keyframes car4 {
-
-  0%, 70% {
-    left: -200px;
-  }
-
-  100% {
-    left: 1600px;
-  }
+  animation: car 8s linear infinite;
 }
 
 .man {
@@ -278,7 +241,7 @@
 
   &__message {
     position: absolute;
-    right: 290px;
+    right: 450px;
     bottom: 230px;
     width: 130px;
     animation: taxi-message 20s infinite ;    
@@ -303,7 +266,7 @@
   }
     
   51%, 68% {
-    right: 0;
+    right: 160px;
   }
 
   100% {
