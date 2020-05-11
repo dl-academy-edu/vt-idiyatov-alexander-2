@@ -1,0 +1,279 @@
+@import "../../components/var";
+
+.title {
+  @extend %montserrat;
+  // font-family: 'Montserrat', 'Open Sans', sans-serif;
+  // font-weight: bold;
+  font-size: $titleSize;
+  line-height: 49px;
+  text-transform: uppercase;
+  color: $black;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.breadcrumbs {
+  min-width: 167px;
+  margin-top: 7px;
+  margin-bottom: 15px;
+
+  &__item-2_hidden, &__link_hidden {
+    display: none;
+  }
+}
+
+.animation {
+
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  max-width: 1400px;
+}
+
+.lantern {
+
+  position: absolute;
+  right: 185px;
+  bottom: 35px;
+  width: 160px;
+}
+
+.lantern1 {
+
+  position: absolute;
+  right: 10px;
+  bottom: 160px;
+  width: 110px;
+}
+
+.lantern2 {
+
+  position: absolute;
+  left: 440px;
+  bottom: 160px;
+  width: 110px;
+}
+
+@keyframes car {
+
+  0% {
+    left: -200px;
+  }
+
+  100% {
+    left: 1600px;
+  }
+}
+
+.car1 {
+
+  position: absolute;
+  left: 70px;
+  bottom:175px;
+  width: 180px;
+  animation: car 5s infinite;
+}
+
+.car2 {
+
+  position: absolute;
+  left: 340px;
+  bottom: 180px;
+  width: 180px;
+  animation: car 6s ease-in-out infinite;
+}
+
+.car3 {
+
+  position: absolute;
+  left: 700px;
+  bottom: 185px;
+  width: 180px;
+  animation: car 4s ease-in infinite;
+}
+
+.car4 {
+
+  position: absolute;
+  right: 30px;
+  bottom: 175px;
+  width: 180px;
+  animation: car 8s linear infinite;
+}
+
+.man {
+
+  position: absolute;
+  left: 330px;
+  bottom: 30px;
+  width: 160px;
+
+  &__hand {
+
+    position: absolute;
+    left:330px;
+    bottom: 185px;
+    width: 100px;
+    animation: man-hand 20s infinite;
+  }
+
+  @keyframes man-hand {
+  
+    0%, 17%, 51%, 68%, 85%, 100% {      
+      transform: rotate( 60deg );
+      transform-origin: 10px 10px;
+    } 
+  
+    34%{      
+      transform: rotate( -90deg );
+    }
+  }
+
+  &__message {
+
+    position: absolute;
+    left: 320px;
+    bottom: 300px;
+    width: 130px;
+    animation: man-message 20s infinite;
+  }
+  
+  @keyframes man-message {
+  
+    0%, 17%, 51%, 68%, 85%, 100% {
+      opacity: 0;
+    } 
+  
+    34%{
+      opacity: 1;
+    }
+  }
+  
+  &__message1 {
+  
+    position: absolute;
+    left: 320px;
+    bottom: 300px;
+    width: 130px;
+    animation: man-message1 20s infinite;
+  }
+  
+  @keyframes man-message1 {
+  
+    0%, 17%, 34%, 51%, 68%, 100% {
+      opacity: 0;
+    } 
+  
+    85% {
+      opacity: 1;
+    }
+  }
+}
+
+
+
+.woman {
+
+  position: absolute;
+  left: 240px;
+  bottom: 30px;
+  width: 75px;
+
+  &__message {
+
+    position: absolute;
+    left: 170px;
+    bottom: 230px;
+    width: 130px;
+    animation: woman 20s infinite;
+  }
+  
+  @keyframes woman {
+  
+    0%, 34%, 51%, 68%, 85%, 100% {
+      opacity: 0;
+    } 
+  
+    17%{
+      opacity: 1;
+    }
+  }
+
+  &__hand {
+
+    position: absolute;
+    left: 260px;
+    bottom: 115px;
+    width: 50px;
+    animation: woman-hand 20s infinite;
+  }
+  
+  @keyframes woman-hand {
+  
+    0%, 34%, 51%, 68%, 85%, 100% {
+      transform: rotate( 0deg );
+      transform-origin: 10px 10px;
+    } 
+  
+    17%{
+      transform: rotate( -45deg );
+    }
+  }
+}
+
+
+
+.suitcases {
+  
+  position: absolute;
+  left: 240px;
+  bottom: 30px;
+  width: 145px;
+}
+
+.taxi {
+
+  position: absolute;
+  bottom: 80px;
+  width: 650px;
+  animation: taxi 20s infinite;
+
+  &__message {
+    position: absolute;
+    right: 450px;
+    bottom: 230px;
+    width: 130px;
+    animation: taxi-message 20s infinite ;    
+  }
+  
+  @keyframes taxi-message {
+  
+    0%, 17%, 34%, 51%, 79%, 100% {
+      opacity: 0;
+    }
+      
+    60%{
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes taxi {
+
+  0%, 17% {
+    right: -650px;
+  }
+    
+  51%, 68% {
+    right: 160px;
+  }
+
+  100% {
+    right: 2000px;
+  }
+}
+
+
+
+

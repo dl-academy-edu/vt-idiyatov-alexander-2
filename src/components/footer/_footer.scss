@@ -218,30 +218,44 @@
   padding-top: 7px;
   margin-right: 130px;
   transition: all .4s;
-
-  &:hover {
-    color: #C29974;
-    cursor: pointer;
-  }
-  
-  &:active {
-    color: #C29974;
-    cursor: none;
-  }
+  overflow: hidden;
 
   &__text {
     padding-right: 25px;
   }
 
   &__star {
-    padding-right: 7px;
-
-    &:before {
-      content: '★';
-    }
-    
-    &_deactive {
-      color: #FFFFFF;
-    }    
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  &__star:not(:checked) > input {
+    display: none;
+  }
+  &__star:not(:checked) > label {
+    float: right;
+    width: 20px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 17px;
+    line-height: 17px;
+    fill: #FFFFFF;
+  }
+  
+  &__star > input:checked ~ label {
+    fill: #836E5B;
+  }
+  &__star:not(:checked) > label:hover, 
+  &__star:not(:checked) > label:hover ~ label {
+    fill: #836E5B;
+  }
+  &__star > input:checked + label:hover,
+  &__star > input:checked + label:hover ~ label,
+  &__star > input:checked ~ label:hover,
+  &__star > input:checked ~ label:hover ~ label,
+  &__star > label:hover ~ input:checked ~ label {
+    fill: #836E5B;
   }
 }
+
+
+

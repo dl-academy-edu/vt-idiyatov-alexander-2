@@ -1,0 +1,14 @@
+
+.arrow {
+  
+  transition: .4s;
+
+  &:hover {
+    stroke: #C29974;
+  }  
+
+  &:active {
+    stroke: #C29974;
+    cursor: none;
+  }
+}
